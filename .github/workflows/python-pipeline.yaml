@@ -1,8 +1,6 @@
 name: Build, Test, Lint
 
 on:
-  push:
-    branches: [ $default-branch ]
   workflow_dispatch:
     inputs:
       test_var: "Dummy"
