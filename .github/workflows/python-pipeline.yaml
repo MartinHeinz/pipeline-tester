@@ -1,9 +1,6 @@
 name: Build, Test, Lint
 
-on:
-  workflow_dispatch:
-    inputs:
-      test_var: "Dummy"
+on: [push]
 
 jobs:
   python-ci-pipeline:
