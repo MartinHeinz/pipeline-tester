@@ -9,6 +9,9 @@ on:
         default: 'Martin'
         # Input has to be provided for the workflow to run
         required: true
+
 jobs:
   python-ci-pipeline:
     uses: MartinHeinz/workflows/.github/workflows/python.yml@master
+    with:
+      username: ${{ github.event.inputs.username }}"
