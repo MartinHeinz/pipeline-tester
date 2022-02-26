@@ -1,7 +1,14 @@
 name: Build, Test, Lint
 
-on: [push]
-
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      name:
+        # Default value if no value is explicitly provided
+        default: 'Martin'
+        # Input has to be provided for the workflow to run
+        required: true
 jobs:
   python-ci-pipeline:
     uses: MartinHeinz/workflows/.github/workflows/python.yml@master
