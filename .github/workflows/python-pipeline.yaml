@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     # Inputs the workflow accepts.
     inputs:
-      name:
+      username:
         # Default value if no value is explicitly provided
         default: 'Martin'
         # Input has to be provided for the workflow to run
