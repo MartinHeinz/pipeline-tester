@@ -4,4 +4,4 @@ on: [push]
 
 jobs:
   python-ci-pipeline:
-    uses: MartinHeinz/workflows/blob/master/.github/workflows/python.yaml@master
+    uses: MartinHeinz/workflows/blob/master/.github/workflows/python.yml@master
