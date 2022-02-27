@@ -14,4 +14,4 @@ jobs:
   python-ci-pipeline:
     uses: MartinHeinz/workflows/.github/workflows/python.yml@master
     with:
-      username: "Hardcoded"
+      username: ${{ github.event.inputs.username }}"
