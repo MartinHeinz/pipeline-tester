@@ -22,6 +22,3 @@ WORKDIR /app
 
 ENTRYPOINT ["/venv/bin/python3", "-m", "tester"]
 USER 1001
-
-LABEL name={NAME}
-LABEL version={VERSION}
