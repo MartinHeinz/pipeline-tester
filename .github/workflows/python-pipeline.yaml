@@ -7,9 +7,9 @@ jobs:
   python-ci-pipeline:
     uses: MartinHeinz/workflows/.github/workflows/python.yml@master
     with:
-      ENABLE_SONAR: false
-      ENABLE_CODE_CLIMATE: false
-      ENABLE_SLACK: true
+      ENABLE_SONAR: ${{ false }}
+      ENABLE_CODE_CLIMATE: ${{ false }}
+      ENABLE_SLACK: ${{ true }}
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
