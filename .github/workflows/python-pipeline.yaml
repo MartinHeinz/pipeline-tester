@@ -6,3 +6,7 @@ on:
 jobs:
   python-ci-pipeline:
     uses: MartinHeinz/workflows/.github/workflows/python.yml@master
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+      SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
