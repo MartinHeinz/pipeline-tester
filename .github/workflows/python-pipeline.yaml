@@ -1,12 +1,14 @@
-name: Build, Test, Lint
+name: CI Pipeline
 
 on:
+  # TODO Add on push + tag
   workflow_dispatch:
 
 jobs:
   python-ci-pipeline:
     uses: MartinHeinz/workflows/.github/workflows/python.yml@master
     with:
+      PYTHON_VERSION: '3.10'
       ENABLE_SONAR: ${{ false }}
       ENABLE_CODE_CLIMATE: ${{ false }}
       ENABLE_SLACK: ${{ true }}
