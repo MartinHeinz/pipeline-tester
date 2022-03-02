@@ -1,5 +1,7 @@
 name: CI Pipeline
 
+# TODO Add .dive-ci file - https://github.com/wagoodman/dive#ci-integration
+
 on:
   # TODO Add on push + tag
   workflow_dispatch:
@@ -16,6 +18,8 @@ jobs:
       ENFORCE_BLACK: ${{ false }}
       ENFORCE_FLAKE8: ${{ false }}
       ENFORCE_BANDIT: ${{ false }}
+      PYLINT_CONFIG: ''
+      BANDIT_CONFIG: ''
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
