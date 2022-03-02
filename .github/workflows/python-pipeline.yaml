@@ -10,7 +10,7 @@ jobs:
     with:
       PYTHON_VERSION: '3.10'
       ENABLE_SONAR: ${{ false }}
-      ENABLE_CODE_CLIMATE: ${{ false }}
+      ENABLE_CODE_CLIMATE: ${{ true }}
       ENABLE_SLACK: ${{ true }}
       ENFORCE_PYLINT: ${{ false }}
       ENFORCE_BLACK: ${{ false }}
