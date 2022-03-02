@@ -8,7 +8,7 @@ jobs:
   python-ci-pipeline:
     uses: MartinHeinz/workflows/.github/workflows/python.yml@master
     with:
-      PYTHON_VERSION: '3.10'
+      PYTHON_VERSION: '3.8'
       ENABLE_SONAR: ${{ false }}
       ENABLE_CODE_CLIMATE: ${{ false }}
       ENABLE_SLACK: ${{ true }}
