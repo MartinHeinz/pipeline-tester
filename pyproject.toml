@@ -6,7 +6,7 @@ description = ""
 authors = ["MartinHeinz <martin7.heinz@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.10"
 pytest = "^7.0.1"
 pytest-cov = "^3.0.0"
 Flask = "^1.1.1"
