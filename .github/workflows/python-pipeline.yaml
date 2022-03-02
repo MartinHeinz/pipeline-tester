@@ -12,6 +12,10 @@ jobs:
       ENABLE_SONAR: ${{ false }}
       ENABLE_CODE_CLIMATE: ${{ false }}
       ENABLE_SLACK: ${{ true }}
+      ENFORCE_PYLINT: ${{ false }}
+      ENFORCE_BLACK: ${{ false }}
+      ENFORCE_FLAKE8: ${{ false }}
+      ENFORCE_BANDIT: ${{ false }}
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
