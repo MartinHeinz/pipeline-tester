@@ -9,6 +9,7 @@ jobs:
     uses: MartinHeinz/workflows/.github/workflows/python.yml@master
     with:
       PYTHON_VERSION: '3.10'
+      DEPENDENCY_MANAGER: 'pipenv'
       ENABLE_SONAR: ${{ false }}
       ENABLE_CODE_CLIMATE: ${{ false }}
       ENABLE_SLACK: ${{ true }}
