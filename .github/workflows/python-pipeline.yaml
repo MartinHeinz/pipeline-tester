@@ -1,7 +1,5 @@
 name: CI Pipeline
 
-# TODO Add .dive-ci file - https://github.com/wagoodman/dive#ci-integration
-
 on:
   # TODO Add on push + tag
   workflow_dispatch:
