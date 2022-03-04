@@ -1,8 +1,6 @@
 name: CI Pipeline
 
-on:
-  # TODO Add on push + tag
-  workflow_dispatch:
+on: [push, workflow_dispatch]
 
 jobs:
   python-ci-pipeline:
