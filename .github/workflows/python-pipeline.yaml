@@ -16,7 +16,11 @@ jobs:
       ENFORCE_BANDIT: ${{ false }}
       PYLINT_CONFIG: ''
       BANDIT_CONFIG: ''
+      CONTAINER_REGISTRY: 'docker.io'
+      CONTAINER_REPOSITORY: 'pipeline-tester-python'
     secrets:
+      CONTAINER_REGISTRY_USERNAME: ${{ secrets.CONTAINER_REGISTRY_USERNAME }}
+      CONTAINER_REGISTRY_PASSWORD: ${{ secrets.CONTAINER_REGISTRY_PASSWORD }}
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
       SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
