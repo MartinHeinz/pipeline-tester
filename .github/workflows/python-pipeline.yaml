@@ -1,21 +1,24 @@
-name: CI Pipeline
+name: Python Container CI Pipeline
 
 on: [push, workflow_dispatch]
 
 jobs:
   python-ci-pipeline:
-    uses: MartinHeinz/workflows/.github/workflows/python.yml@master
+    uses: MartinHeinz/workflows/.github/workflows/python-container-ci.yml@v1.0.0
     with:
       PYTHON_VERSION: '3.10'
+      DEPENDENCY_MANAGER: 'pip'
       ENABLE_SONAR: ${{ false }}
-      ENABLE_CODE_CLIMATE: ${{ false }}
+      ENABLE_CODE_CLIMATE: ${{ true }}
       ENABLE_SLACK: ${{ true }}
       ENFORCE_PYLINT: ${{ false }}
       ENFORCE_BLACK: ${{ false }}
       ENFORCE_FLAKE8: ${{ false }}
       ENFORCE_BANDIT: ${{ false }}
+      ENFORCE_DIVE: ${{ false }}
       PYLINT_CONFIG: ''
       BANDIT_CONFIG: ''
+      DIVE_CONFIG: ''
       CONTAINER_REGISTRY: 'docker.io'
       CONTAINER_REPOSITORY: 'martinheinz/pipeline-tester-python'
     secrets:
