@@ -1,4 +1,4 @@
-                                                                                                              # Pipeline Testing Repository
+# Pipeline Testing Repository
 
 ![Python Container Pipeline](https://github.com/MartinHeinz/pipeline-tester/actions/workflows/python-pipeline.yaml/badge.svg?branch=python-pipenv)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=MartinHeinz_pipeline-tester&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=MartinHeinz_pipeline-tester)
