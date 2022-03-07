@@ -4,15 +4,23 @@ RUN apt-get update && \
     python3 -m venv /venv && \
     /venv/bin/pip install --upgrade pip
 
+ENV PIP_DEFAULT_TIMEOUT=100 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PIP_NO_CACHE_DIR=1 \
+    POETRY_VERSION=1.0.5
+
 FROM builder AS builder-venv
-# COPY requirements.txt /requirements.txt
-# RUN /venv/bin/pip install --disable-pip-version-check -r /requirements.txt
+
+RUN /venv/bin/pip install "poetry==$POETRY_VERSION" && python3 -m venv /venv
+
+COPY pyproject.toml poetry.lock /
+RUN /venv/bin/poetry export -f requirements.txt | /venv/bin/pip install -r /dev/stdin
 
 FROM builder-venv AS tester
 
 COPY . /app
 WORKDIR /app
-# RUN /venv/bin/pytest
+RUN /venv/bin/pytest
 
 FROM gcr.io/distroless/python3-debian11 AS runner
 COPY --from=tester /venv /venv
